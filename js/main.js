@@ -1,10 +1,38 @@
 // Constructors
 // Only add code to *THIS* section!
 
+/// 
 ///
 ///
 ///
-///
+
+var Dog = function(params){
+  params = params || {};
+  this.color = params.color;
+  this.hungry = (params.hungry === undefined) ? true : false ;
+  this.pet = params.pet;
+  this.status = 'normal';
+
+
+};
+function pet (x){
+  x.status = 'happy'
+};
+var Human = function (params){
+  params = params || {};
+  this.color = params.color;
+  this.hungry = params.hungry;
+  this.pet = function(x){
+    x.status = 'happy';
+  }
+  this.feed = function(x){
+    x.hungry = false;
+  }
+  this.cool = (params.cool=== undefined) ? false : true;
+};
+
+
+
 
 // Do not ADD or MODIFY code below this line :)
 // Dogs
